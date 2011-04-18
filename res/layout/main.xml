@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:screenOrientation="landscape" android:layout_width="match_parent"
+	android:layout_height="match_parent" android:orientation="vertical"
+	android:background="@drawable/menuwallpaper">
+	<TextView android:layout_height="wrap_content"
+		android:paddingRight="35dip" android:textStyle="bold" android:id="@+id/mainmenuText"
+		android:layout_width="match_parent" android:text="That Tower Defense"
+		android:textSize="45dip" android:gravity="center" android:paddingLeft="35dip" android:textColor="#FFFFFF"></TextView>
+	<TableRow android:layout_width="match_parent" android:id="@+id/tableRow1"
+		android:layout_gravity="center_vertical|center_horizontal"
+		android:layout_height="200dip">
+		<Button android:text="Play" android:id="@+id/playButton"
+			android:gravity="left|center_vertical|center_horizontal"
+			android:layout_weight="1" android:layout_width="50dip"
+			android:layout_gravity="left|center_vertical" android:layout_marginLeft="25dip" android:layout_marginRight="150dip" android:textSize="18dip"></Button>
+		<Button android:text="Options" android:id="@+id/optionsButton"
+			android:gravity="right|center_vertical" android:layout_weight="1"
+			android:layout_width="50dip" android:layout_gravity="right|center_vertical" android:layout_marginRight="25dip" android:layout_marginLeft="150dip" android:textSize="18dip"></Button>
+	</TableRow>
+</LinearLayout>

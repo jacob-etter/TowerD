@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/LinearLayout01"
+	android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:gravity="center" android:layout_width="300dip">
+	<TextView android:id="@+id/TextView01" android:layout_height="wrap_content"
+		android:textColor="#fff" android:textStyle="bold"
+		android:layout_width="wrap_content" android:text="Choose Your Tower" android:textSize="20dip"></TextView>
+	<TableRow android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/tableRow3">
+		<TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="wrap_content" android:text="This is the red tower. The red tower is red. Why is it red? Because it drank the blood of its enimies. " android:textSize="10dip" android:textColor="#fff" android:gravity="center_vertical|center_horizontal"></TextView>
+		<TextView android:id="@+id/textView2" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="wrap_content" android:text="This is the blue tower. The blue tower is blue. Why is it blue? Because blue is this towers favorite color. " android:textSize="10dip" android:textColor="#fff" android:gravity="center_vertical|center_horizontal"></TextView>
+		<TextView android:id="@+id/textView3" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="wrap_content" android:textSize="10dip" android:textColor="#fff" android:gravity="center_vertical|center_horizontal" android:text="This is the green tower. The green tower is green. Why is it Green? No one knows."></TextView>
+	</TableRow>
+	<TableRow android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/tableRow1">
+		<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text=" Red " android:layout_weight="1" android:id="@+id/ButtonRed"></Button>
+		<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Blue " android:layout_weight="1" android:id="@+id/ButtonBlue"></Button>
+		<Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="Green" android:layout_weight="1" android:id="@+id/ButtonGreen"></Button>
+	</TableRow>
+	<TableRow android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/tableRow2">
+		<ImageView android:layout_height="wrap_content" android:id="@+id/imageView1" android:layout_width="wrap_content" android:layout_weight="1" android:src="@drawable/red2"></ImageView>
+		<ImageView android:layout_height="wrap_content" android:id="@+id/imageView2" android:layout_width="wrap_content" android:layout_weight="1" android:src="@drawable/blue2"></ImageView>
+		<ImageView android:layout_height="wrap_content" android:id="@+id/imageView3" android:layout_width="wrap_content" android:layout_weight="1" android:src="@drawable/green2"></ImageView>
+	</TableRow>
+	<Button android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel" android:id="@+id/ButtonCancel"></Button>
+</LinearLayout>

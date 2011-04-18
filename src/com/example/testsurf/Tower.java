@@ -10,7 +10,6 @@ public class Tower extends Zone{
 	protected Drawable base; //base png of the tower
 	protected Drawable barrel; //barrel png of the tower
 	protected double angle; //angle of the barrel
-	protected double lastAngle;
 	/* Tower stats */
 	protected double rng; //range of the tower
 	protected double cooldown; //rate of fire

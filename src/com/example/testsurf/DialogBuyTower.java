@@ -37,23 +37,23 @@ public class DialogBuyTower extends DialogTower implements OnClickListener{
 		Resources res = context.getResources();
 		Tower tower;
 		/** When OK Button is clicked, dismiss the dialog */
-		if ((v == ButtonRed)&&(usermoney >= res.getInteger(R.integer.pricetowerred))){
-			user.decMoney(res.getInteger(R.integer.pricetowerred));
+		if ((v == ButtonRed)&&(usermoney >= res.getInteger(R.integer.pricetowerrifle))){
+			user.decMoney(res.getInteger(R.integer.pricetowerrifle));
 			tower = new TowerRifle(sides[0],sides[1],sides[2],sides[3],context);
 			towerlist.add((Tower) tower);
 			view.tiles.setGridZone(x_pos,y_pos,tower);
 			dismiss();
 		}
-		else if ((v == ButtonBlue)&&(usermoney >= res.getInteger(R.integer.pricetowerblue))){
-			user.decMoney(res.getInteger(R.integer.pricetowerblue));
+		else if ((v == ButtonBlue)&&(usermoney >= res.getInteger(R.integer.pricetowermachinegun))){
+			user.decMoney(res.getInteger(R.integer.pricetowermachinegun));
 			tower = new TowerMachineGun(sides[0],sides[1],sides[2],sides[3],context);
 			towerlist.add((Tower) tower);
 			view.tiles.setGridZone(x_pos,y_pos,tower);
 			dismiss();
 		}
-		else if ((v == ButtonGreen)&&(usermoney >= res.getInteger(R.integer.pricetowergreen))){
-			user.decMoney(res.getInteger(R.integer.pricetowergreen));
-			tower = new TowerGreen(sides[0],sides[1],sides[2],sides[3],context);
+		else if ((v == ButtonGreen)&&(usermoney >= res.getInteger(R.integer.pricetowertesla))){
+			user.decMoney(res.getInteger(R.integer.pricetowertesla));
+			tower = new TowerTesla(sides[0],sides[1],sides[2],sides[3],context);
 			towerlist.add((Tower) tower);
 			view.tiles.setGridZone(x_pos,y_pos,tower);
 			dismiss();

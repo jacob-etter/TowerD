@@ -26,6 +26,7 @@ public class TowerTesla extends Tower
 	protected void findTarget(ArrayList<Creep> creeplist) 
 	{
 		// Internal Vars
+		
 		Creep creep;
 		double dist = 0.0;
 		double creep_x = 0;
@@ -43,7 +44,7 @@ public class TowerTesla extends Tower
 			if (dist < rng) 
 			{
 				targets[targets.length] = creep;
-				if(targets.length >= 3)
+				if(targets.length >= 1)
 				{
 					return;
 				}
@@ -54,20 +55,23 @@ public class TowerTesla extends Tower
 	public void fire(ArrayList<Creep> creeplist, ArrayList<Bullet> bulletlist, GameView view) 
 	{
 		long currenttime=System.currentTimeMillis();
-		if(targets == null || targets.length < 3)
+		if(targets == null || targets.length < 1)
 		{
 			findTarget(creeplist);
 		}
 		if(((currenttime-last_fire)) >= cooldown*1000)
 		{
-			for(int i = 0; i < targets.length; i++)
+			for(int i = 0; i < targets.length-1; i++)
 			{
 				bulletlist.add(new BulletSimple(pos_x, pos_y, cur_target,view));
-				targets[i].decHealth(dmg);
+				if(targets[i] != null)
+				{	
+					targets[i].decHealth(dmg);
+				}
 			}
 			last_fire = currenttime;
 		}
-		for(int i = 0; i < targets.length; i++)
+		for(int i = 0; i < targets.length-1; i++)
 		{
 			if(targets[i] != null && targets[i].getAlive() == false)
 				targets[i] = null;
